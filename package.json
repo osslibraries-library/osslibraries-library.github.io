@@ -1,0 +1,23 @@
+{
+  "name": "osslibraries-docs",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Developer documentation for OSSLibraries and its Hvigor plugin.",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^2.0.0-alpha.19",
+    "vitepress-plugin-group-icons": "^1.7.6"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.20.0",
+      "onFail": "download"
+    }
+  }
+}

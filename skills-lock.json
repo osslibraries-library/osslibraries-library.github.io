@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "vitepress-plugin-group-icons": {
+      "source": "yuyinws/vitepress-plugin-group-icons",
+      "sourceType": "github",
+      "skillPath": "skills/vitepress-plugin-group-icons/SKILL.md",
+      "computedHash": "3c214275794998247baa45a3107965de1842fb41397a00e23bb4d62885a64513"
+    }
+  }
+}

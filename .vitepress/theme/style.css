@@ -1,0 +1,62 @@
+:root {
+  --vp-c-brand-1: #6c7cff;
+  --vp-c-brand-2: #8490ff;
+  --vp-c-brand-3: #5a68f0;
+  --vp-c-brand-soft: rgba(108, 124, 255, 0.16);
+
+  --vp-font-family-base:
+    "Inter", "PingFang SC", "HarmonyOS Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", system-ui,
+    -apple-system, sans-serif;
+  --vp-font-family-mono:
+    "JetBrains Mono", "SFMono-Regular", ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f6f7f9;
+  --vp-c-bg-mute: #eef0f4;
+  --vp-c-divider: #e2e5ec;
+}
+
+.dark {
+  --vp-c-bg: #0b0d12;
+  --vp-c-bg-soft: #10131b;
+  --vp-c-bg-mute: #141826;
+  --vp-c-bg-alt: #0e1118;
+  --vp-c-divider: #1d2230;
+  --vp-c-divider-light: #181d29;
+  --vp-c-divider-dark: #222838;
+  --vp-c-gutter: #0b0d12;
+  --vp-c-text-1: #e8ebf2;
+  --vp-c-text-2: #a2acbe;
+  --vp-c-text-3: #66708a;
+}
+
+.VPDoc {
+  color: var(--vp-c-text-1);
+}
+
+/* Slightly wider measure for comfortable reading of guides. */
+.vp-doc {
+  max-width: 760px;
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  letter-spacing: -0.01em;
+}
+
+.vp-doc p {
+  line-height: 1.85;
+}
+
+/* Code blocks: subtle padding and rounded corners. */
+.vp-doc div[class*="language-"] {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+}
+
+/* Make tables breathe a little. */
+.vp-doc table {
+  border-radius: 8px;
+  overflow: hidden;
+}
