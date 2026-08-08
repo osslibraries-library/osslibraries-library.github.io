@@ -29,7 +29,7 @@ features:
 ---
 
 > [!TIP]
-> This library ships skills you can install so an AI agent wires it into your project for you.
+> This library ships skills you can install so an AI agent can wire them into your project for you.
 >
 > ::: code-group
 >
