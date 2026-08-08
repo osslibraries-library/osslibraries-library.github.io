@@ -4,6 +4,41 @@
 
 下面的步骤假设你有一个标准的、带 `entry` 模块的 HarmonyOS 项目。
 
+> [!TIP]
+> 本项目提供 Skills，可让 AI Agent 帮你完成项目接入。
+>
+> ::: code-group
+>
+> ```zsh [npm]
+> npx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [pnpm]
+> pnpm dlx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Yarn]
+> yarn dlx skills add composable-tu/osslibraries
+> ```
+> 
+> ```zsh [Bun]
+> bunx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Deno]
+> deno x npm:skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Vite+]
+> vpx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [vlt]
+> vlx skills add composable-tu/osslibraries
+> ```
+>
+> :::
+
 ## 1. 安装依赖包
 
 涉及两个包。UI 包来自 OHPM：
@@ -24,12 +59,16 @@ npm install -D osslibraries-hvigor-plugin
 pnpm add -D osslibraries-hvigor-plugin
 ```
 
-```sh [yarn]
+```sh [Yarn]
 yarn add -D osslibraries-hvigor-plugin
 ```
 
 ```sh [bun]
 bun add -D osslibraries-hvigor-plugin
+```
+
+```sh [Deno]
+deno add --dev npm:osslibraries-hvigor-plugin
 ```
 
 ```sh [Vite+]

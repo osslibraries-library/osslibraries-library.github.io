@@ -27,3 +27,38 @@ features:
   - title: 自定义 UI
     details: 可单独使用 Core 包加载并解析数据，渲染方式由你决定。
 ---
+
+> [!TIP]
+> 本项目提供 Skills，可让 AI Agent 帮你完成项目接入。
+>
+> ::: code-group
+>
+> ```zsh [npm]
+> npx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [pnpm]
+> pnpm dlx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Yarn]
+> yarn dlx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Bun]
+> bunx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Deno]
+> deno x npm:skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Vite+]
+> vpx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [vlt]
+> vlx skills add composable-tu/osslibraries
+> ```
+>
+> :::

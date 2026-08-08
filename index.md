@@ -27,3 +27,38 @@ features:
   - title: Custom UI
     details: Use the core package alone to load and parse the data, and render it however you like.
 ---
+
+> [!TIP]
+> This library ships skills you can install so an AI agent wires it into your project for you.
+>
+> ::: code-group
+>
+> ```zsh [npm]
+> npx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [pnpm]
+> pnpm dlx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Yarn]
+> yarn dlx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Bun]
+> bunx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Deno]
+> deno x npm:skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Vite+]
+> vpx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [vlt]
+> vlx skills add composable-tu/osslibraries
+> ```
+>
+> :::

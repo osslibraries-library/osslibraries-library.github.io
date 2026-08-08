@@ -21,7 +21,7 @@ export default defineConfig({
       "link",
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&family=Google+Sans+Code:ital,wght@0,300..700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap",
       },
     ],
   ],
@@ -78,6 +78,22 @@ export default defineConfig({
       label: "简体中文",
       lang: "zh-CN",
       link: "/zh/",
+      markdown: {
+        container: {
+          tipLabel: "提示",
+          infoLabel: "信息",
+          warningLabel: "警告",
+          dangerLabel: "危险",
+          noteLabel: "备注",
+          detailsLabel: "详情",
+          importantLabel: "重要",
+          cautionLabel: "注意",
+        },
+        codeCopyButton: {
+          tooltipText: "复制代码",
+          copiedText: "已复制",
+        },
+      },
       themeConfig: {
         nav: [
           { text: "指南", link: "/zh/guide/introduction", activeMatch: "/zh/guide/" },
@@ -127,12 +143,25 @@ export default defineConfig({
             ],
           },
         ],
+        outline: { label: "本页目录" },
+        docFooter: { prev: "上一页", next: "下一页" },
+        darkModeSwitchLabel: "外观",
+        darkModeSwitchTitle: "切换到深色模式",
+        lightModeSwitchTitle: "切换到浅色模式",
+        sidebarMenuLabel: "菜单",
+        returnToTopLabel: "返回顶部",
+        langMenuLabel: "切换语言",
+        skipToContentLabel: "跳转到内容",
+        lastUpdated: { text: "最后更新于" },
+        editLink: {
+          pattern: "https://github.com/osslibraries-library/docs/edit/main/:path",
+          text: "在 GitHub 上编辑此页",
+        },
       },
     },
   },
 
   themeConfig: {
-    logo: "/logo.svg",
     siteTitle: "OSSLibraries",
     socialLinks: [{ icon: "github", link: "https://github.com/composable-tu/osslibraries" }],
     editLink: {
@@ -158,6 +187,7 @@ export default defineConfig({
               button: { buttonText: "搜索文档", buttonAriaLabel: "搜索文档" },
               modal: {
                 displayDetails: "显示详细信息",
+                cancelButtonTitle: "取消",
                 resetButtonTitle: "清除查询",
                 backButtonTitle: "返回",
                 noResultsText: "没有找到相关结果",
@@ -182,6 +212,17 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [groupIconVitePlugin()],
+    plugins: [
+      groupIconVitePlugin({
+        customIcon: {
+          ".ets":
+            "https://developer.huawei.com/allianceCmsResource/resource/HUAWEI_Developer_VUE/images/ArkTS.svg",
+          vlt: {
+            light: "https://www.vlt.io/images/brand-kit/vlt-v-dark.svg",
+            dark: "https://www.vlt.io/images/brand-kit/vlt-v-light.svg",
+          },
+        },
+      }),
+    ],
   },
 });

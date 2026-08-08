@@ -12,12 +12,16 @@ npm install -D osslibraries-hvigor-plugin
 pnpm add -D osslibraries-hvigor-plugin
 ```
 
-```sh [yarn]
+```sh [Yarn]
 yarn add -D osslibraries-hvigor-plugin
 ```
 
 ```sh [bun]
 bun add -D osslibraries-hvigor-plugin
+```
+
+```sh [Deno]
+deno add --dev npm:osslibraries-hvigor-plugin
 ```
 
 ```sh [Vite+]

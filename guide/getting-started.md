@@ -4,6 +4,41 @@ This guide walks through a minimal setup: register the plugin, add the UI packag
 
 The setup assumes a standard HarmonyOS project with an `entry` module.
 
+> [!TIP]
+> This library ships skills you can install so an AI agent wires it into your project for you.
+>
+> ::: code-group
+>
+> ```zsh [npm]
+> npx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [pnpm]
+> pnpm dlx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Yarn]
+> yarn dlx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Bun]
+> bunx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Deno]
+> deno x npm:skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [Vite+]
+> vpx skills add composable-tu/osslibraries
+> ```
+>
+> ```zsh [vlt]
+> vlx skills add composable-tu/osslibraries
+> ```
+>
+> :::
+
 ## 1. Install the packages
 
 Two packages are involved. The UI package comes from OHPM:
@@ -24,12 +59,16 @@ npm install -D osslibraries-hvigor-plugin
 pnpm add -D osslibraries-hvigor-plugin
 ```
 
-```sh [yarn]
+```sh [Yarn]
 yarn add -D osslibraries-hvigor-plugin
 ```
 
 ```sh [bun]
 bun add -D osslibraries-hvigor-plugin
+```
+
+```sh [Deno]
+deno add --dev npm:osslibraries-hvigor-plugin
 ```
 
 ```sh [Vite+]
