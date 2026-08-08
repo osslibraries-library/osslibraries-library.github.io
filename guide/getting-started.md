@@ -5,7 +5,7 @@ This guide walks through a minimal setup: register the plugin, add the UI packag
 The setup assumes a standard HarmonyOS project with an `entry` module.
 
 > [!TIP]
-> This library ships skills you can install so an AI agent wires it into your project for you.
+> This library ships skills that you can install so an AI agent can wire them into your project for you.
 >
 > ::: code-group
 >
