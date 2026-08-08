@@ -1,0 +1,115 @@
+:root {
+  --vp-c-brand-1: #d37a48;
+  --vp-c-brand-2: #f39360;
+  --vp-c-brand-3: #b46132;
+  --vp-c-brand-soft: rgba(211, 122, 72, 0.16);
+
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+
+  --vp-font-family-base:
+    "Google Sans Flex", "Inter", "PingFang SC", "HarmonyOS Sans SC", "Noto Sans CJK SC",
+    "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --vp-font-family-mono:
+    "Google Sans Code", "JetBrains Mono", "SFMono-Regular", ui-monospace, "Cascadia Code", Menlo,
+    Consolas, monospace;
+
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f6f7f9;
+  --vp-c-bg-mute: #eef0f4;
+  --vp-c-divider: #e2e5ec;
+}
+
+.dark {
+  --vp-c-brand-1: #ffb691;
+  --vp-c-brand-2: #ffdbcb;
+  --vp-c-brand-3: #f39360;
+  --vp-c-brand-soft: rgba(255, 182, 145, 0.16);
+
+  --vp-c-bg: #0b0d12;
+  --vp-c-bg-soft: #10131b;
+  --vp-c-bg-mute: #141826;
+  --vp-c-bg-alt: #0e1118;
+  --vp-c-divider: #1d2230;
+  --vp-c-divider-light: #181d29;
+  --vp-c-divider-dark: #222838;
+  --vp-c-gutter: #0b0d12;
+  --vp-c-text-1: #e8ebf2;
+  --vp-c-text-2: #a2acbe;
+  --vp-c-text-3: #66708a;
+}
+
+.VPDoc {
+  color: var(--vp-c-text-1);
+}
+
+/* Slightly wider measure for comfortable reading of guides. */
+.vp-doc {
+  max-width: 760px;
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  letter-spacing: -0.01em;
+}
+
+.vp-doc p {
+  line-height: 1.85;
+}
+
+/* Code blocks: subtle padding and rounded corners. */
+.vp-doc div[class*="language-"] {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+}
+
+/* Make tables breathe a little. */
+.vp-doc table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Self-hosted Google Sans (latin + latin-ext; CJK falls back to system fonts). */
+@font-face {
+  font-family: "Google Sans Flex";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/google-sans-flex-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Google Sans Flex";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/google-sans-flex-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Google Sans Code";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/google-sans-code-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Google Sans Code";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/google-sans-code-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
