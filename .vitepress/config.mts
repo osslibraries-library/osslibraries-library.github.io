@@ -1,5 +1,11 @@
+import { readFileSync } from "node:fs";
 import { defineConfig } from "vitepress";
 import { groupIconMdPlugin, groupIconVitePlugin } from "vitepress-plugin-group-icons";
+
+const readSvg = (name: string) =>
+  readFileSync(new URL(`./theme/icons/${name}`, import.meta.url), "utf8")
+    .replace(/^<\?xml[^>]*\?>/, "")
+    .trimStart();
 
 const ogDescription =
   "Open-source license scanning and display for HarmonyOS. Scan OHPM dependencies at build time and render a complete license list in your app.";
@@ -15,15 +21,6 @@ export default defineConfig({
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:title", content: "OSSLibraries" }],
     ["meta", { property: "og:description", content: ogDescription }],
-    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
-    ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" }],
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@100..900&family=Google+Sans+Code:ital,wght@0,300..700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap",
-      },
-    ],
   ],
 
   locales: {
@@ -215,11 +212,10 @@ export default defineConfig({
     plugins: [
       groupIconVitePlugin({
         customIcon: {
-          ".ets":
-            "https://developer.huawei.com/allianceCmsResource/resource/HUAWEI_Developer_VUE/images/ArkTS.svg",
+          ".ets": readSvg("arkts.svg"),
           vlt: {
-            light: "https://www.vlt.io/images/brand-kit/vlt-v-dark.svg",
-            dark: "https://www.vlt.io/images/brand-kit/vlt-v-light.svg",
+            light: readSvg("vlt-dark.svg"),
+            dark: readSvg("vlt-light.svg"),
           },
         },
       }),
