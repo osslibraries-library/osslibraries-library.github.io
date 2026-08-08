@@ -4,7 +4,7 @@ layout: home
 hero:
   name: OSSLibraries
   text: for HarmonyOS apps
-  tagline: Scans OHPM dependencies at build time and renders the resulting license list in app.
+  tagline: Scans OHPM dependencies at build time and renders the resulting license list in the app.
   actions:
     - theme: brand
       text: Get Started
