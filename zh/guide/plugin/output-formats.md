@@ -18,7 +18,7 @@
 
 ## 运行时行为
 
-运行时，库优先读取 `osslibraries.msgpack`，找不到再回退到 `osslibraries.json`。因此可为了体积选择 MessagePack，同时保留一份 JSON 供工具使用。
+运行时，库优先读取 `osslibraries.msgpack`，找不到再回退到 `osslibraries.json`。
 
 ## 选择
 

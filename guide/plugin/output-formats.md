@@ -18,7 +18,7 @@ Compact binary, written to `osslibraries.msgpack`.
 
 ## At run time
 
-The library prefers `osslibraries.msgpack` and falls back to `osslibraries.json`. You can therefore pick MessagePack for size while keeping a JSON copy for tooling.
+The library prefers `osslibraries.msgpack` and falls back to `osslibraries.json`.
 
 ## Choosing a format
 
