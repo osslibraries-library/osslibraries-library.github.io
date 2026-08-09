@@ -151,7 +151,8 @@ export default defineConfig({
         skipToContentLabel: "跳转到内容",
         lastUpdated: { text: "最后更新于" },
         editLink: {
-          pattern: "https://github.com/osslibraries-library/docs/edit/main/:path",
+          pattern:
+            "https://github.com/osslibraries-library/osslibraries-library.github.io/edit/main/:path",
           text: "在 GitHub 上编辑此页",
         },
       },
@@ -162,7 +163,8 @@ export default defineConfig({
     siteTitle: "OSSLibraries",
     socialLinks: [{ icon: "github", link: "https://github.com/composable-tu/osslibraries" }],
     editLink: {
-      pattern: "https://github.com/osslibraries-library/docs/edit/main/:path",
+      pattern:
+        "https://github.com/osslibraries-library/osslibraries-library.github.io/edit/main/:path",
       text: "Edit this page on GitHub",
     },
     search: {
