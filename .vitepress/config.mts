@@ -51,7 +51,7 @@ export default defineConfig({
             text: "Library",
             items: [
               { text: "Prebuilt UI Pages", link: "/guide/library/quick-start" },
-              { text: "Wearable Apps", link: "/guide/library/wearable" },
+              { text: "Prebuilt UI (Wearable)", link: "/guide/library/wearable" },
               { text: "Custom UI", link: "/guide/library/custom-ui" },
               { text: "Loading & Parsing", link: "/guide/library/loading" },
               { text: "Data Model", link: "/guide/library/data-model" },
@@ -122,7 +122,7 @@ export default defineConfig({
             text: "Library",
             items: [
               { text: "预定义 UI", link: "/zh/guide/library/quick-start" },
-              { text: "穿戴设备应用", link: "/zh/guide/library/wearable" },
+              { text: "预定义 UI（穿戴设备）", link: "/zh/guide/library/wearable" },
               { text: "自定义 UI", link: "/zh/guide/library/custom-ui" },
               { text: "加载与解析", link: "/zh/guide/library/loading" },
               { text: "数据模型", link: "/zh/guide/library/data-model" },
@@ -213,6 +213,8 @@ export default defineConfig({
       groupIconVitePlugin({
         customIcon: {
           ".ets": readSvg("arkts.svg"),
+          "arkts": readSvg("arkts.svg"),
+          ohpm: readSvg("openharmony.svg"),
           vlt: {
             light: readSvg("vlt-dark.svg"),
             dark: readSvg("vlt-light.svg"),

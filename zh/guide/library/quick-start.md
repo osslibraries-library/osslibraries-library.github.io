@@ -4,7 +4,7 @@
 
 ## 安装
 
-```zsh
+```zsh [ohpm]
 ohpm install osslibraries_ui
 ```
 
@@ -25,7 +25,7 @@ import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseDetailPage';
 
 用 `pushNamedRoute` 跳到列表页：
 
-```ets
+```ets [ArkTS]
 this.getUIContext().getRouter().pushNamedRoute({
   name: 'OSSLibrariesLicenseListPage'
 });

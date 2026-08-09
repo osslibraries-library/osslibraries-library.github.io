@@ -1,10 +1,10 @@
-# Wearable Apps
+# Prebuilt UI (Wearable)
 
-Wearable apps use a separate UI module, `osslibraries_ui_wear`, with pages tuned for watch screens.
+The wearable prebuilt UI uses a separate module, `osslibraries_ui_wear`, with pages tuned for watch screens.
 
 ## Install
 
-```zsh
+```zsh [ohpm]
 ohpm install osslibraries_ui_wear
 ```
 
@@ -26,7 +26,7 @@ export default {
 
 Import the wearable pages at the top of a page file in the module:
 
-```ets
+```ets [ArkTS]
 import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseListPageWear';
 import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseDetailPageWear';
 ```
@@ -35,7 +35,7 @@ import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseDetailPageWea
 
 Use the list page's route name:
 
-```ets
+```ets [ArkTS]
 this.getUIContext().getRouter().pushNamedRoute({
   name: 'OSSLibrariesLicenseListPageWear'
 });

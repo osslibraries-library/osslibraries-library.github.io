@@ -1,10 +1,10 @@
-# 穿戴设备应用
+# 预定义 UI（穿戴设备）
 
-穿戴设备应用使用独立的 UI 模块 `osslibraries_ui_wear`，其页面针对手表屏幕做了适配。
+穿戴设备的预定义 UI 使用独立的模块 `osslibraries_ui_wear`，其页面针对手表屏幕做了适配。
 
 ## 安装
 
-```zsh
+```zsh [ohpm]
 ohpm install osslibraries_ui_wear
 ```
 
@@ -26,7 +26,7 @@ export default {
 
 导入即注册路由。在模块的页面文件顶部导入穿戴版页面：
 
-```ets
+```ets [ArkTS]
 import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseListPageWear';
 import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseDetailPageWear';
 ```
@@ -35,7 +35,7 @@ import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseDetailPageWea
 
 使用列表页的路由名：
 
-```ets
+```ets [ArkTS]
 this.getUIContext().getRouter().pushNamedRoute({
   name: 'OSSLibrariesLicenseListPageWear'
 });

@@ -43,7 +43,7 @@ The setup assumes a standard HarmonyOS project with an `entry` module.
 
 Two packages are involved. The UI package comes from OHPM:
 
-```zsh
+```zsh [ohpm]
 ohpm install osslibraries_ui
 ```
 
@@ -118,7 +118,7 @@ The imports register the routes; `main_pages.json` does not need to be changed.
 
 From any page, use `pushNamedRoute` with the list page's route name:
 
-```ets
+```ets [ArkTS]
 this.getUIContext().getRouter().pushNamedRoute({
   name: 'OSSLibrariesLicenseListPage'
 });
@@ -137,6 +137,6 @@ Open the license page to see the list of dependencies; each entry opens a detail
 
 ## What's next
 
-- Wearable apps use a separate UI module. See [Wearables](/guide/library/wearable).
+- The wearable prebuilt UI uses a separate module. See [Prebuilt UI (Wearable)](/guide/library/wearable).
 - For custom rendering, use the core package instead. See [Custom UI](/guide/library/custom-ui).
 - Scanner behavior is configurable. See [Configuration](/guide/plugin/configuration).

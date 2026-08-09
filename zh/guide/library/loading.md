@@ -30,7 +30,7 @@
 
 用于在页面间共享 `Libs` 实例的静态持有者：
 
-```ets
+```ets [ArkTS]
 LibsHolder.set(libs);
 const libs = LibsHolder.get();
 ```

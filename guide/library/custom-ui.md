@@ -4,7 +4,7 @@ To render the data with your own UI, use the core `osslibraries` package directl
 
 ## Install
 
-```zsh
+```zsh [ohpm]
 ohpm install osslibraries
 ```
 
@@ -14,7 +14,7 @@ This installs the core package `osslibraries`, which contains no pages; the prov
 
 Call `LibsLoader.fromRawfile` with your module context to get a sorted `Libs` instance:
 
-```ets
+```ets [ArkTS]
 import { common } from '@kit.AbilityKit';
 import { Libs, LibsLoader } from 'osslibraries';
 
@@ -29,7 +29,7 @@ The loader checks `osslibraries.msgpack` first, then `osslibraries.json`.
 
 `Libs` exposes the parsed collections and a couple of lookup helpers:
 
-```ets
+```ets [ArkTS]
 const lib = libs.findLibrary('@ohos/hypium');
 const license = libs.findLicense(hash);
 ```
@@ -47,7 +47,7 @@ Build your UI as needed. The [Data Model](/guide/library/data-model) page lists 
 
 The default pages share one `Libs` instance between the list and the detail page. Do the same with `LibsHolder`:
 
-```ets
+```ets [ArkTS]
 LibsHolder.set(libs);
 const cached = LibsHolder.get();
 ```
@@ -58,7 +58,7 @@ This avoids loading and parsing the file on every navigation.
 
 If you obtain the metadata some other way — a network response, a file, a test fixture — use `Libs.fromJson` or `Libs.fromMsgpack`:
 
-```ets
+```ets [ArkTS]
 const libs = Libs.fromJson(jsonString);
 const libs = Libs.fromMsgpack(byteArray);
 ```

@@ -30,7 +30,7 @@ The parser handles both formats. It reads the license map first, then resolves e
 
 A simple static holder for sharing a `Libs` instance across pages:
 
-```ets
+```ets [ArkTS]
 LibsHolder.set(libs);
 const libs = LibsHolder.get();
 ```

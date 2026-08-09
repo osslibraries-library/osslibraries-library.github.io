@@ -4,7 +4,7 @@
 
 ## 安装
 
-```zsh
+```zsh [ohpm]
 ohpm install osslibraries
 ```
 
@@ -14,7 +14,7 @@ ohpm install osslibraries
 
 用你的模块上下文调用 `LibsLoader.fromRawfile`，它会返回一个已经排好序的 `Libs` 实例：
 
-```ets
+```ets [ArkTS]
 import { common } from '@kit.AbilityKit';
 import { Libs, LibsLoader } from 'osslibraries';
 
@@ -29,7 +29,7 @@ const libs: Libs = await LibsLoader.fromRawfile(context);
 
 `Libs` 实例上有解析好的集合，还有几个现成的查找方法：
 
-```ets
+```ets [ArkTS]
 const lib = libs.findLibrary('@ohos/hypium');
 const license = libs.findLicense(hash);
 ```
@@ -47,7 +47,7 @@ const license = libs.findLicense(hash);
 
 预定义页面的列表页和详情页之间，共享着同一个 `Libs` 实例。用 `LibsHolder` 就能实现同样的效果：
 
-```ets
+```ets [ArkTS]
 LibsHolder.set(libs);
 const cached = LibsHolder.get();
 ```
@@ -58,7 +58,7 @@ const cached = LibsHolder.get();
 
 元数据来自其他途径（网络响应、文件、测试夹具）时，使用 `Libs.fromJson` 或 `Libs.fromMsgpack` 直接解析：
 
-```ets
+```ets [ArkTS]
 const libs = Libs.fromJson(jsonString);
 const libs = Libs.fromMsgpack(byteArray);
 ```

@@ -43,7 +43,7 @@
 
 涉及两个包。UI 包来自 OHPM：
 
-```zsh
+```zsh [ohpm]
 ohpm install osslibraries_ui
 ```
 
@@ -118,7 +118,7 @@ import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseDetailPage';
 
 在任意页面通过 `pushNamedRoute` 跳转：
 
-```ets
+```ets [ArkTS]
 this.getUIContext().getRouter().pushNamedRoute({
   name: 'OSSLibrariesLicenseListPage'
 });
@@ -137,6 +137,6 @@ this.getUIContext().getRouter().pushNamedRoute({
 
 ## 接下来
 
-- 穿戴设备应用使用独立的 UI 模块，见[穿戴设备应用](/zh/guide/library/wearable)。
+- 穿戴设备的预定义 UI 使用独立的模块，见[预定义 UI（穿戴设备）](/zh/guide/library/wearable)。
 - 需要自定义渲染时改用 Core 包，见[自定义 UI](/zh/guide/library/custom-ui)。
 - 扫描器行为可配置，见[配置](/zh/guide/plugin/configuration)。

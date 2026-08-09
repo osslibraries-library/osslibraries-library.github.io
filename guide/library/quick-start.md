@@ -4,7 +4,7 @@ The `osslibraries_ui` package provides two ArkUI pages you can embed in your app
 
 ## Install
 
-```zsh
+```zsh [ohpm]
 ohpm install osslibraries_ui
 ```
 
@@ -25,7 +25,7 @@ Any page file works as long as it is part of the module. `Index.ets` is the usua
 
 Navigate to the list page with `pushNamedRoute`:
 
-```ets
+```ets [ArkTS]
 this.getUIContext().getRouter().pushNamedRoute({
   name: 'OSSLibrariesLicenseListPage'
 });
