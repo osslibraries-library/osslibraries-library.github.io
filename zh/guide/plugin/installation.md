@@ -16,7 +16,7 @@ pnpm add -D osslibraries-hvigor-plugin
 yarn add -D osslibraries-hvigor-plugin
 ```
 
-```sh [bun]
+```sh [Bun]
 bun add -D osslibraries-hvigor-plugin
 ```
 
