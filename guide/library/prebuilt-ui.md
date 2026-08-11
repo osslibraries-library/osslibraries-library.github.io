@@ -1,6 +1,6 @@
 # Prebuilt UI Pages
 
-The `osslibraries_ui` package provides two ArkUI pages you can embed in your app: a list of every dependency and a detail page for each one.
+The `osslibraries_ui` package provides two embeddable ArkUI pages: a list of every dependency and a detail page for each one.
 
 ## Install
 
@@ -51,4 +51,4 @@ The detail page reads the parameters, looks the library up through `LibsHolder`,
 - The pages are built on ArkUI and UI Design Kit components.
 - Link taps open the system browser through `startAbility`.
 
-See [Loading & Parsing](/guide/library/loading) for how the pages get their data, and [Custom UI](/guide/library/custom-ui) for replacing the pages with your own.
+See [Loading & Parsing](/reference/library/loading) for how the pages get their data, and [Custom UI](/guide/library/custom-ui) for replacing the pages with your own.

@@ -1,6 +1,6 @@
 # Custom UI
 
-To render the data with your own UI, use the core `osslibraries` package directly.
+To render the data with a custom UI, use the core `osslibraries` package directly.
 
 ## Install
 
@@ -41,7 +41,7 @@ For each library you get:
 - licenses — resolved `License` objects, not hashes
 - tag
 
-Build your UI as needed. The [Data Model](/guide/library/data-model) page lists every field.
+Build the UI as needed. The [Data Model](/reference/data-model) page lists every field.
 
 ## Share data across pages
 

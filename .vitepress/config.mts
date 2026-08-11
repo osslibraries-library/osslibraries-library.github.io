@@ -31,44 +31,59 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: "Guide", link: "/guide/introduction", activeMatch: "/guide/" },
-          { text: "Library", link: "/guide/library/quick-start", activeMatch: "/guide/library/" },
-          { text: "Hvigor Plugin", link: "/guide/plugin/overview", activeMatch: "/guide/plugin/" },
+          { text: "Reference", link: "/reference/data-model", activeMatch: "/reference/" },
           {
             text: "GitHub",
             link: "https://github.com/composable-tu/osslibraries",
           },
         ],
-        sidebar: [
-          {
-            text: "Getting Started",
-            items: [
-              { text: "Introduction", link: "/guide/introduction" },
-              { text: "Quick Start", link: "/guide/getting-started" },
-              { text: "Architecture", link: "/guide/architecture" },
-            ],
-          },
-          {
-            text: "Library",
-            items: [
-              { text: "Prebuilt UI Pages", link: "/guide/library/quick-start" },
-              { text: "Prebuilt UI (Wearable)", link: "/guide/library/wearable" },
-              { text: "Custom UI", link: "/guide/library/custom-ui" },
-              { text: "Loading & Parsing", link: "/guide/library/loading" },
-              { text: "Data Model", link: "/guide/library/data-model" },
-            ],
-          },
-          {
-            text: "Hvigor Plugin",
-            items: [
-              { text: "Overview", link: "/guide/plugin/overview" },
-              { text: "Installation", link: "/guide/plugin/installation" },
-              { text: "Configuration", link: "/guide/plugin/configuration" },
-              { text: "Output Formats", link: "/guide/plugin/output-formats" },
-              { text: "How It Works", link: "/guide/plugin/how-it-works" },
-              { text: "Programmatic Use", link: "/guide/plugin/programmatic" },
-            ],
-          },
-        ],
+        sidebar: {
+          "/guide/": [
+            {
+              text: "Tutorial",
+              items: [
+                { text: "Introduction", link: "/guide/introduction" },
+                { text: "Quick Start", link: "/guide/getting-started" },
+              ],
+            },
+            {
+              text: "Library",
+              items: [
+                { text: "Prebuilt UI Pages", link: "/guide/library/prebuilt-ui" },
+                { text: "Prebuilt UI (Wearable)", link: "/guide/library/wearable" },
+                { text: "Custom UI", link: "/guide/library/custom-ui" },
+              ],
+            },
+            {
+              text: "Hvigor Plugin",
+              items: [
+                { text: "Install", link: "/guide/plugin/installation" },
+                { text: "Use the Plugin Programmatically", link: "/guide/plugin/programmatic" },
+              ],
+            },
+          ],
+          "/reference/": [
+            {
+              text: "Reference",
+              items: [
+                { text: "Data Model", link: "/reference/data-model" },
+                { text: "Plugin Options", link: "/reference/plugin/configuration" },
+                { text: "Output Formats", link: "/reference/plugin/output-formats" },
+                { text: "Library API", link: "/reference/library/api" },
+                { text: "Hvigor Plugin API", link: "/reference/plugin/api" },
+              ],
+            },
+            {
+              text: "Explanation",
+              items: [
+                { text: "Architecture", link: "/reference/architecture" },
+                { text: "Loading & Parsing", link: "/reference/library/loading" },
+                { text: "How It Works", link: "/reference/plugin/how-it-works" },
+                { text: "Hvigor Plugin Overview", link: "/reference/plugin/overview" },
+              ],
+            },
+          ],
+        },
       },
     },
     zh: {
@@ -93,53 +108,60 @@ export default defineConfig({
       },
       themeConfig: {
         nav: [
-          { text: "指南", link: "/zh/guide/introduction", activeMatch: "/zh/guide/" },
-          {
-            text: "Library",
-            link: "/zh/guide/library/quick-start",
-            activeMatch: "/zh/guide/library/",
-          },
-          {
-            text: "Hvigor Plugin",
-            link: "/zh/guide/plugin/overview",
-            activeMatch: "/zh/guide/plugin/",
-          },
+          { text: "指南", link: "/zh/guide/getting-started", activeMatch: "/zh/guide/" },
+          { text: "参考", link: "/zh/reference/architecture", activeMatch: "/zh/reference/" },
           {
             text: "GitHub",
             link: "https://github.com/composable-tu/osslibraries",
           },
         ],
-        sidebar: [
-          {
-            text: "开始使用",
-            items: [
-              { text: "简介", link: "/zh/guide/introduction" },
-              { text: "快速上手", link: "/zh/guide/getting-started" },
-              { text: "架构", link: "/zh/guide/architecture" },
-            ],
-          },
-          {
-            text: "Library",
-            items: [
-              { text: "预定义 UI", link: "/zh/guide/library/quick-start" },
-              { text: "预定义 UI（穿戴设备）", link: "/zh/guide/library/wearable" },
-              { text: "自定义 UI", link: "/zh/guide/library/custom-ui" },
-              { text: "加载与解析", link: "/zh/guide/library/loading" },
-              { text: "数据模型", link: "/zh/guide/library/data-model" },
-            ],
-          },
-          {
-            text: "Hvigor Plugin",
-            items: [
-              { text: "概览", link: "/zh/guide/plugin/overview" },
-              { text: "安装", link: "/zh/guide/plugin/installation" },
-              { text: "配置", link: "/zh/guide/plugin/configuration" },
-              { text: "输出格式", link: "/zh/guide/plugin/output-formats" },
-              { text: "工作原理", link: "/zh/guide/plugin/how-it-works" },
-              { text: "编程式调用", link: "/zh/guide/plugin/programmatic" },
-            ],
-          },
-        ],
+        sidebar: {
+          "/zh/guide/": [
+            {
+              text: "教程",
+              items: [
+                { text: "简介", link: "/zh/guide/introduction" },
+                { text: "快速上手", link: "/zh/guide/getting-started" },
+              ],
+            },
+            {
+              text: "Library",
+              items: [
+                { text: "预定义 UI", link: "/zh/guide/library/prebuilt-ui" },
+                { text: "预定义 UI（穿戴设备）", link: "/zh/guide/library/wearable" },
+                { text: "自定义 UI", link: "/zh/guide/library/custom-ui" },
+              ],
+            },
+            {
+              text: "Hvigor Plugin",
+              items: [
+                { text: "安装", link: "/zh/guide/plugin/installation" },
+                { text: "编程式调用", link: "/zh/guide/plugin/programmatic" },
+              ],
+            },
+          ],
+          "/zh/reference/": [
+            {
+              text: "参考",
+              items: [
+                { text: "数据模型", link: "/zh/reference/data-model" },
+                { text: "插件选项", link: "/zh/reference/plugin/configuration" },
+                { text: "输出格式", link: "/zh/reference/plugin/output-formats" },
+                { text: "Library API", link: "/zh/reference/library/api" },
+                { text: "Hvigor Plugin API", link: "/zh/reference/plugin/api" },
+              ],
+            },
+            {
+              text: "解释",
+              items: [
+                { text: "架构", link: "/zh/reference/architecture" },
+                { text: "加载与解析", link: "/zh/reference/library/loading" },
+                { text: "工作原理", link: "/zh/reference/plugin/how-it-works" },
+                { text: "Hvigor Plugin 概览", link: "/zh/reference/plugin/overview" },
+              ],
+            },
+          ],
+        },
         outline: { label: "本页目录" },
         docFooter: { prev: "上一页", next: "下一页" },
         darkModeSwitchLabel: "外观",
@@ -160,6 +182,7 @@ export default defineConfig({
   },
 
   themeConfig: {
+    logo: '/osslibraries.png',
     siteTitle: "OSSLibraries",
     socialLinks: [{ icon: "github", link: "https://github.com/composable-tu/osslibraries" }],
     editLink: {
@@ -186,7 +209,6 @@ export default defineConfig({
               button: { buttonText: "搜索文档", buttonAriaLabel: "搜索文档" },
               modal: {
                 displayDetails: "显示详细信息",
-                cancelButtonTitle: "取消",
                 resetButtonTitle: "清除查询",
                 backButtonTitle: "返回",
                 noResultsText: "没有找到相关结果",
@@ -215,7 +237,7 @@ export default defineConfig({
       groupIconVitePlugin({
         customIcon: {
           ".ets": readSvg("arkts.svg"),
-          "arkts": readSvg("arkts.svg"),
+          arkts: readSvg("arkts.svg"),
           ohpm: readSvg("openharmony.svg"),
           vlt: {
             light: readSvg("vlt-dark.svg"),

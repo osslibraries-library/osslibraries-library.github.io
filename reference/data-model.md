@@ -1,6 +1,6 @@
 # Data Model
 
-The metadata follows a single shape whether it is JSON or MessagePack. This page documents that shape and the ArkTS types it maps to.
+The metadata follows a single shape whether it is JSON or MessagePack. The shape below also defines the ArkTS types it maps to.
 
 ## The root object
 
@@ -29,7 +29,7 @@ The metadata follows a single shape whether it is JSON or MessagePack. This page
 | `funding`         | Funding[]            |                                              |
 | `tag`             | string[]             |                                              |
 
-In code, each entry is a `Library` instance with two convenience getters: `artifactId` returns `uniqueId:artifactVersion`, and `openSource` is true when `scm.url` is set.
+In code, each entry is a `Library` instance with two convenience getters: `artifactId` returns `uniqueId:artifactVersion`, and `openSource` is true when `scm.url` is set. In the raw data `organization` and `scm` are `null` when absent; in ArkTS the parser leaves them `undefined` instead.
 
 ## License
 
@@ -70,7 +70,7 @@ This is an actual entry from a scanned project, trimmed to the essentials:
   "organization": null,
   "funding": [],
   "tag": [],
-  "licenses": ["533c62b51f490ec5ba0118d19bb2caef961c3b630bf4355eb1e360026db6fda2"]
+  "licenses": ["0cec06e0e55fbc3dc5cee4fca9b607f66cb8f4e4dbcf3b3c013594dd156732e9"]
 }
 ```
 
@@ -87,3 +87,5 @@ Its license entry holds the full text, keyed by the SHA-256 hash of that text:
 ```
 
 Note that the hash here is the SHA-256 of the bundled LICENSE file text. When a package ships no LICENSE file, the entry is keyed by its SPDX id instead (for example `"MIT"`), and the text comes from the canonical SPDX license list.
+
+The ArkTS classes these shapes map to are documented in [Library API Reference](/reference/library/api); the functions that produce the shape are in [Plugin API Reference](/reference/plugin/api).

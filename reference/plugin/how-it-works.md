@@ -1,6 +1,6 @@
 # How It Works
 
-The plugin's task, `ossScanLicenses`, runs a small pipeline on every build. This page walks through each stage.
+The plugin's task, `ossScanLicenses`, runs a small pipeline on every build. Each stage is described below.
 
 ## 1. Find dependencies
 
@@ -32,4 +32,4 @@ Libraries are sorted by name, then by version with semver-aware ordering. The re
 
 ## Which modules are excluded
 
-The module the plugin is registered on is always removed from the list, because its dependencies are your project's own modules, not third-party libraries. Exclude additional local modules with `selfModules` (see [Configuration](/guide/plugin/configuration)).
+The module the plugin is registered on is always removed from the list, because its dependencies are the project's own modules, not third-party libraries. Exclude additional local modules with `selfModules` (see [Configuration](/reference/plugin/configuration)).

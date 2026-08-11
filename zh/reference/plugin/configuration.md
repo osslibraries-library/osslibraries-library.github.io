@@ -38,4 +38,4 @@ plugins: [ossScanPlugin({ format: OutputFormat.MessagePack })];
 
 也接受原始字符串：`'json'` 或 `'message-pack'`。
 
-输出文件的扩展名随 `format` 而定，除非显式设置了 `outputFile`。两种格式的区别见[输出格式](/zh/guide/plugin/output-formats)。
+输出文件的扩展名随 `format` 而定，除非显式设置了 `outputFile`。两种格式的区别见[输出格式](/zh/reference/plugin/output-formats)。

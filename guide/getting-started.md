@@ -1,11 +1,9 @@
 # Quick Start
 
-This guide walks through a minimal setup: register the plugin, add the UI package, and show the license list.
-
-The setup assumes a standard HarmonyOS project with an `entry` module.
+This tutorial wires OSSLibraries into a HarmonyOS app and shows a license list on screen. The list contains every OHPM dependency the app ships. Each entry opens a detail page with the full license text. The plugin regenerates the data on every build, so the list always matches the packaged dependencies.
 
 > [!TIP]
-> This library ships skills that you can install so an AI agent can wire them into your project for you.
+> This library ships skills you can install so an AI agent can wire them into your project for you.
 >
 > ::: code-group
 >
@@ -39,15 +37,26 @@ The setup assumes a standard HarmonyOS project with an `entry` module.
 >
 > :::
 
-## 1. Install the packages
+## Prerequisites
 
-Two packages are involved. The UI package comes from OHPM:
+- A HarmonyOS project with an `entry` module, built with ArkTS pages (ArkUI) in DevEco Studio.
+- [OHPM](https://ohpm.openharmony.cn/) and npm (or another Node package manager) on the build machine.
+
+::: warning Cangjie apps are not supported
+Per Huawei's documentation, Cangjie HarmonyOS apps cannot add ArkTS pages or call third-party ArkTS libraries. This library is built on ArkTS pages and components, so Cangjie apps cannot use it.
+:::
+
+## Step 1 — Install the two packages
+
+One package renders the license list; the other scans dependencies at build time.
+
+Install the UI package from OHPM:
 
 ```zsh [ohpm]
 ohpm install osslibraries_ui
 ```
 
-The scanner is a Hvigor plugin published to npm. Install it as a dev dependency:
+Install the scanner as a dev dependency. It is a Hvigor plugin published to npm:
 
 ::: code-group
 
@@ -81,7 +90,9 @@ vlt install -D osslibraries-hvigor-plugin
 
 :::
 
-## 2. Register the plugin
+**Verification:** both packages appear in the project's lock files — `osslibraries_ui` under OHPM, `osslibraries-hvigor-plugin` under npm/pnpm.
+
+## Step 2 — Register the plugin
 
 Open `entry/hvigorfile.ts` and add the plugin to the `plugins` array:
 
@@ -95,7 +106,7 @@ export default {
 };
 ```
 
-On each build, the plugin scans `oh_modules/` and writes `entry/src/main/resources/rawfile/osslibraries.json`.
+On each build, the plugin scans `oh_modules/` and writes the license metadata to `entry/src/main/resources/rawfile/osslibraries.json`.
 
 The module you register the plugin on is always excluded from the license list. To exclude additional local modules, pass their names in `selfModules`:
 
@@ -103,7 +114,7 @@ The module you register the plugin on is always excluded from the license list. 
 plugins: [ossScanPlugin({ selfModules: ["mylibrary", "3rdlibrary"] })];
 ```
 
-## 3. Import the pages
+## Step 3 — Import the pages
 
 The UI package provides two pages reachable by named route. Import them at the top of any page file in the `entry` module, for example `Index.ets`:
 
@@ -114,7 +125,18 @@ import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseDetailPage';
 
 The imports register the routes; `main_pages.json` does not need to be changed.
 
-## 4. Navigate to the license list
+## Step 4 — Build to generate the data
+
+Run a build in DevEco Studio. The plugin logs the scan result:
+
+```text
+[osslibraries] scanning OHPM dependencies at /path/to/project
+[osslibraries] wrote 128 libraries to .../rawfile/osslibraries.json (JSON)
+```
+
+**Verification:** the file `entry/src/main/resources/rawfile/osslibraries.json` now exists and contains a `libraries` array. See [Data Model](/reference/data-model) for its shape.
+
+## Step 5 — Navigate to the license list
 
 From any page, use `pushNamedRoute` with the list page's route name:
 
@@ -124,19 +146,10 @@ this.getUIContext().getRouter().pushNamedRoute({
 });
 ```
 
-## 5. Build and run
+**Verification:** the list page opens and shows the dependencies, one row per library. Tapping a row opens the detail page with the full license text.
 
-Run the app in DevEco Studio. On build, the plugin logs the scan result:
+## Next steps
 
-```text
-[osslibraries] scanning OHPM dependencies at /path/to/project
-[osslibraries] wrote 128 libraries to .../rawfile/osslibraries.json (JSON)
-```
-
-Open the license page to see the list of dependencies; each entry opens a detail view with the full license text.
-
-## What's next
-
-- The wearable prebuilt UI uses a separate module. See [Prebuilt UI (Wearable)](/guide/library/wearable).
-- For custom rendering, use the core package instead. See [Custom UI](/guide/library/custom-ui).
-- Scanner behavior is configurable. See [Configuration](/guide/plugin/configuration).
+- [Configuration](/reference/plugin/configuration) — scanner options and output formats.
+- [Prebuilt UI (Wearable)](/guide/library/wearable) — a separate module for watch screens.
+- [Custom UI](/guide/library/custom-ui) — render the data with custom pages.

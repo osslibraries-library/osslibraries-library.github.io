@@ -1,10 +1,10 @@
-# Programmatic Use
+# Use the Plugin Programmatically
 
-The plugin's scanner is exported as a plain library, so you can use it outside Hvigor — in a custom task, a script, or a test. This page is a guide-level overview; the full API reference will be added later.
+The scanner exports as a plain library and runs outside Hvigor, in a custom task, a script, or a test. The examples below require a HarmonyOS project (or any directory containing `oh_modules/`) and Node.js.
 
-## scanProject
+## Scan a project
 
-Runs the full scan and returns the result:
+Import `scanProject` and point it at the project root:
 
 ```ts
 import { scanProject } from "osslibraries-hvigor-plugin";
@@ -12,11 +12,11 @@ import { scanProject } from "osslibraries-hvigor-plugin";
 const result = scanProject("/path/to/project", { selfModules: new Set(["entry"]) });
 ```
 
-`result` has the `{ libraries, licenses }` shape described in the [Data Model](/guide/library/data-model).
+`result` has the `{ libraries, licenses }` shape described in [Data Model](/reference/data-model). Pass local modules in `selfModules` to keep local code out of the list; `"entry"` is always excluded on top of the set.
 
-## Serialize
+## Write the result in a format
 
-Write the result in either format:
+Both output formats are available. For JSON, use `serializeResult`. For MessagePack, resolve the serializer and encode:
 
 ```ts
 import {
@@ -32,15 +32,17 @@ const json = serializeResult(result); // JSON string
 const bytes = getSerializer(OutputFormat.MessagePack).encode(result); // Buffer
 ```
 
-## Lower-level helpers
+## Reuse a single pipeline stage
 
-The pipeline is exported in pieces, so you can reuse one stage at a time:
+The scanner's stages are exported individually and can be used one at a time:
 
 - `readOhPackage` / `parseOhPackage` / `parseJson5` — read and normalize a manifest.
 - `resolveLicense(decl)` — resolve one license declaration to entries.
 - `contentHash(text)` — SHA-256 of license text.
 - `buildLibrary(pkg, pkgDir)` — assemble one library entry from a manifest.
 - `toOutputObject(result)` — the plain object the serializers encode.
+
+Signatures for all of these are in [Plugin API Reference](/reference/plugin/api).
 
 ## A complete example
 

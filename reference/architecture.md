@@ -1,11 +1,11 @@
 # Architecture
 
-OSSLibraries consists of a build-time scanner and a runtime renderer. The following describes the complete flow from your dependencies to the screen.
+OSSLibraries consists of a build-time scanner and a runtime renderer. The sections below describe the complete flow from dependencies to the rendered list.
 
 ## Two stages
 
 1. **Build time — the Hvigor plugin** reads every OHPM dependency installed under `oh_modules/`, resolves licenses, and writes the result to a file in the module's `rawfile/` directory.
-2. **Run time — the library** loads that file from the rawfile, parses it into typed objects, and renders it, either through the provided pages or through your own UI.
+2. **Run time — the library** loads that file from the rawfile, parses it into typed objects, and renders it, either through the provided pages or through a custom UI.
 
 The rawfile artifact is the contract between the two stages. JSON and MessagePack serializations of it carry the same shape:
 
@@ -52,12 +52,12 @@ At run time, the library looks for `osslibraries.msgpack` first, then falls back
 
 Putting the metadata in the rawfile keeps the two pieces decoupled:
 
-- The scanner writes data only; it does not depend on your UI.
-- The library reads data only; it does not depend on your build system.
+- The scanner writes data only; it does not depend on the UI.
+- The library reads data only; it does not depend on the build system.
 
 Either side can be swapped: point the plugin at a different output, or load a hand-written JSON file — the library behaves the same.
 
 ## More
 
-- The data shape in detail: [Data Model](/guide/library/data-model).
-- Scanner internals: [How It Works](/guide/plugin/how-it-works).
+- The data shape in detail: [Data Model](/reference/data-model).
+- Scanner internals: [How It Works](/reference/plugin/how-it-works).
