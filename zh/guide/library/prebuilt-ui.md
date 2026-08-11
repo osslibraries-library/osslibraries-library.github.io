@@ -51,4 +51,4 @@ interface LicenseDetailParams {
 - 基于 ArkUI 与 UI Design Kit 组件构建。
 - 点击链接通过 `startAbility` 打开系统浏览器。
 
-数据获取方式见[加载与解析](/zh/guide/library/loading)，自定义 UI 见[自定义 UI](/zh/guide/library/custom-ui)。
+数据获取方式见[加载与解析](/zh/reference/library/loading)，自定义 UI 见[自定义 UI](/zh/guide/library/custom-ui)。

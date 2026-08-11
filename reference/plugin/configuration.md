@@ -12,7 +12,7 @@
 
 ## selfModules
 
-Modules that belong to your project and should not appear in the license list. The module the plugin is registered on is always excluded automatically; add every other local module here.
+Modules that belong to the project and should not appear in the license list. The module the plugin is registered on is always excluded automatically; add every other local module here.
 
 ```ts
 plugins: [ossScanPlugin({ selfModules: ["mylibrary", "3rdlibrary"] })];
@@ -38,4 +38,4 @@ plugins: [ossScanPlugin({ format: OutputFormat.MessagePack })];
 
 Raw strings are accepted too: `'json'` or `'message-pack'`.
 
-The output file extension follows the format unless `outputFile` is set. See [Output Formats](/guide/plugin/output-formats) for the difference between the two.
+The output file extension follows the format unless `outputFile` is set. See [Output Formats](/reference/plugin/output-formats) for the difference between the two.

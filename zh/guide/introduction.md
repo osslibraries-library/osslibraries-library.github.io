@@ -4,6 +4,10 @@ OSSLibraries 为 HarmonyOS 应用提供开源许可证的展示能力。它在�
 
 该清单无需手动维护，也不会过时：列表内容与 HAP 中实际打包的依赖一致。
 
+::: warning 不支持仓颉（Cangjie）应用
+按照华为的文档，仓颉鸿蒙应用既不能增加 ArkTS 页面，也不能调用三方 ArkTS 库，而本库正是建立在 ArkTS 页面与组件之上的，所以仓颉应用用不了它。
+:::
+
 ## 两个部分
 
 项目由两个包组成，分别对应构建时与运行时：
@@ -31,11 +35,7 @@ OSSLibraries 将维护工作交给构建过程：每次构建时插件检查真�
 - 一个基于 ArkTS 页面（ArkUI）构建的 HarmonyOS 应用。
 - 带 Hvigor 构建系统的 DevEco Studio。
 
-::: warning 不支持仓颉（Cangjie）应用
-按照华为的文档，仓颉鸿蒙应用既不能增加 ArkTS 页面，也不能调用三方 ArkTS 库，而本库正是建立在 ArkTS 页面与组件之上的，所以仓颉应用用不了它。
-:::
-
 ## 接下来读什么
 
 - [快速上手](/zh/guide/getting-started) —— 开始使用。
-- [架构](/zh/guide/architecture) —— 两个部分的配合方式。
+- [架构](/zh/reference/architecture) —— 两个部分的配合方式。

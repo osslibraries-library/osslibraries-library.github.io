@@ -54,12 +54,13 @@ OSSLibraries 分为构建期与运行期两部分：构建期由 Hvigor 插件�
 
 将元数据放入 rawfile，可使两个部分解耦：
 
-- 扫描器只写数据，不依赖你的 UI。
-- 库只读数据，不依赖你的构建系统。
+- 扫描器只写数据，不依赖 UI。
+
+- 库只读数据，不依赖构建系统。
 
 任一侧均可替换：修改插件的输出路径，或加载手写的 JSON 文件，库的行为保持一致。
 
 ## 延伸阅读
 
-- 数据结构的具体定义，见[数据模型](/zh/guide/library/data-model)。
-- 扫描器内部实现，见[工作原理](/zh/guide/plugin/how-it-works)。
+- 数据结构的具体定义，见[数据模型](/zh/reference/data-model)。
+- 扫描器内部实现，见[工作原理](/zh/reference/plugin/how-it-works)。

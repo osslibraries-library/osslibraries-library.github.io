@@ -12,7 +12,7 @@ ohpm install osslibraries
 
 ## 加载数据
 
-用你的模块上下文调用 `LibsLoader.fromRawfile`，它会返回一个已经排好序的 `Libs` 实例：
+用模块上下文调用 `LibsLoader.fromRawfile`，它会返回一个已经排好序的 `Libs` 实例：
 
 ```ets [ArkTS]
 import { common } from '@kit.AbilityKit';
@@ -41,7 +41,7 @@ const license = libs.findLicense(hash);
 - licenses —— 解析后的 `License` 对象（非哈希）
 - tag
 
-按需构建 UI。全部字段的定义见[数据模型](/zh/guide/library/data-model)。
+按需构建 UI。全部字段的定义见[数据模型](/zh/reference/data-model)。
 
 ## 跨页面共享数据
 

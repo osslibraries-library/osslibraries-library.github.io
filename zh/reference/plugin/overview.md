@@ -2,7 +2,7 @@
 
 `osslibraries-hvigor-plugin` 是一个 Hvigor 任务，负责扫描 HarmonyOS 项目的 OHPM 依赖，并生成 OSSLibraries 需要的许可证元数据。
 
-它是项目的构建期部分。与库的配合方式见[架构](/zh/guide/architecture)。
+它是项目的构建期部分。与库的配合方式见[架构](/zh/reference/architecture)。
 
 ## 功能
 
@@ -21,4 +21,5 @@
 ## 开始使用
 
 - [安装](/zh/guide/plugin/installation)
-- [配置](/zh/guide/plugin/configuration)
+- [配置](/zh/reference/plugin/configuration)
+- [插件 API 参考](/zh/reference/plugin/api)

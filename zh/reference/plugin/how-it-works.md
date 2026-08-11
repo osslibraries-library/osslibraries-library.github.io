@@ -32,4 +32,4 @@
 
 ## 哪些模块会被排除
 
-注册插件所在的模块总是会从列表移除，因为其依赖属于项目自身的模块，而非第三方库。需排除其他本地模块时，使用 `selfModules` 配置，见[配置](/zh/guide/plugin/configuration)。
+注册插件所在的模块总是会从列表移除，因为其依赖属于项目自身的模块，而非第三方库。需排除其他本地模块时，使用 `selfModules` 配置，见[配置](/zh/reference/plugin/configuration)。

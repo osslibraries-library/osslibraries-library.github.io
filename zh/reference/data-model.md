@@ -1,6 +1,6 @@
 # 数据模型
 
-元数据无论以 JSON 还是 MessagePack 形式存在，都遵循同一种数据结构。本页给出该结构的完整定义及对应的 ArkTS 类型。
+元数据无论以 JSON 还是 MessagePack 形式存在，都遵循同一种数据结构。该结构同时定义了它映射到的 ArkTS 类型。
 
 ## 根对象
 
@@ -29,7 +29,7 @@
 | `funding`         | Funding[]            |                                     |
 | `tag`             | string[]             |                                     |
 
-在代码中，每个条目是 `Library` 实例，带有两个便捷 getter：`artifactId` 返回 `uniqueId:artifactVersion`；`openSource` 在 `scm.url` 非空时为 true。
+在代码中，每个条目是 `Library` 实例，带有两个便捷 getter：`artifactId` 返回 `uniqueId:artifactVersion`；`openSource` 在 `scm.url` 非空时为 true。原始数据中，`organization` 与 `scm` 缺失时为 `null`；在 ArkTS 中解析器将它们置为 `undefined`。
 
 ## License
 
@@ -87,3 +87,5 @@
 ```
 
 最后说明一下哈希的来历：这里的值是包内 LICENSE 文件文本的 SHA-256。当某个包没有自带 LICENSE 文件时，条目就改用它的 SPDX 标识符作键（比如 `"MIT"`），而文本则取自 SPDX 的规范许可证列表。
+
+这些结构对应的 ArkTS 类见[库 API 参考](/zh/reference/library/api)；生成该结构的函数见[插件 API 参考](/zh/reference/plugin/api)。
