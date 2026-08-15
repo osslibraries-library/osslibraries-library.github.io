@@ -52,9 +52,17 @@
 
 从 OHPM 安装 UI 包：
 
-```zsh [ohpm]
+::: code-group
+
+```zsh [ohpm - 手机 / 平板 / 折叠屏]
 ohpm install osslibraries_ui
 ```
+
+```zsh [ohpm - 穿戴]
+ohpm install osslibraries_ui_wear
+```
+
+:::
 
 扫描器是发布到 npm 的 Hvigor 插件，按开发依赖安装：
 
@@ -90,7 +98,7 @@ vlt install -D osslibraries-hvigor-plugin
 
 :::
 
-**验证：** 两个包都出现在项目的锁文件中——`osslibraries_ui` 在 OHPM 侧，`osslibraries-hvigor-plugin` 在 npm/pnpm 侧。
+**验证：** 两个包都出现在项目的锁文件中——`osslibraries_ui` 或 `osslibraries_ui_wear` 在 OHPM 侧，`osslibraries-hvigor-plugin` 在 npm/pnpm 侧。
 
 ## 第 2 步 — 注册插件
 
@@ -118,10 +126,19 @@ plugins: [ossScanPlugin({ selfModules: ["mylibrary", "3rdlibrary"] })];
 
 UI 包提供了两个通过命名路由访问的页面。在 `entry` 模块的任意页面文件顶部（比如 `Index.ets`）导入它们：
 
-```ets [Index.ets]
+::: code-group
+
+```ets [ArkTS - 手机 / 平板 / 折叠屏]
 import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseListPage';
 import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseDetailPage';
 ```
+
+```ets [ArkTS - 穿戴]
+import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseListPageWear';
+import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseDetailPageWear';
+```
+
+:::
 
 导入即注册路由，`main_pages.json` 无需改动。
 
@@ -140,11 +157,21 @@ import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseDetailPage';
 
 在任意页面通过 `pushNamedRoute` 跳转：
 
-```ets [ArkTS]
+::: code-group
+
+```ets [ArkTS - 手机 / 平板 / 折叠屏]
 this.getUIContext().getRouter().pushNamedRoute({
   name: 'OSSLibrariesLicenseListPage'
 });
 ```
+
+```ets [ArkTS - 穿戴]
+this.getUIContext().getRouter().pushNamedRoute({
+  name: 'OSSLibrariesLicenseListPageWear'
+});
+```
+
+:::
 
 **验证：** 列表页打开并展示依赖列表，每个库一行。点击任意一行进入包含完整许可证全文的详情页。
 

@@ -50,11 +50,19 @@ Per Huawei's documentation, Cangjie HarmonyOS apps cannot add ArkTS pages or cal
 
 One package renders the license list; the other scans dependencies at build time.
 
-Install the UI package from OHPM:
+Install the UI package from OHPM, matching your device type:
 
-```zsh [ohpm]
+::: code-group
+
+```zsh [ohpm - Phone / Tablet / Foldable]
 ohpm install osslibraries_ui
 ```
+
+```zsh [ohpm - Wearable]
+ohpm install osslibraries_ui_wear
+```
+
+:::
 
 Install the scanner as a dev dependency. It is a Hvigor plugin published to npm:
 
@@ -90,7 +98,7 @@ vlt install -D osslibraries-hvigor-plugin
 
 :::
 
-**Verification:** both packages appear in the project's lock files — `osslibraries_ui` under OHPM, `osslibraries-hvigor-plugin` under npm/pnpm.
+**Verification:** both packages appear in the project's lock files — `osslibraries_ui` or `osslibraries_ui_wear` under OHPM, `osslibraries-hvigor-plugin` under npm/pnpm.
 
 ## Step 2 — Register the plugin
 
@@ -118,10 +126,19 @@ plugins: [ossScanPlugin({ selfModules: ["mylibrary", "3rdlibrary"] })];
 
 The UI package provides two pages reachable by named route. Import them at the top of any page file in the `entry` module, for example `Index.ets`:
 
-```ets [Index.ets]
+::: code-group
+
+```ets [ArkTS - Phone / Tablet / Foldable]
 import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseListPage';
 import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseDetailPage';
 ```
+
+```ets [ArkTS - Wearable]
+import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseListPageWear';
+import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseDetailPageWear';
+```
+
+:::
 
 The imports register the routes; `main_pages.json` does not need to be changed.
 
@@ -140,11 +157,21 @@ Run a build in DevEco Studio. The plugin logs the scan result:
 
 From any page, use `pushNamedRoute` with the list page's route name:
 
-```ets [ArkTS]
+::: code-group
+
+```ets [ArkTS - Phone / Tablet / Foldable]
 this.getUIContext().getRouter().pushNamedRoute({
   name: 'OSSLibrariesLicenseListPage'
 });
 ```
+
+```ets [ArkTS - Wearable]
+this.getUIContext().getRouter().pushNamedRoute({
+  name: 'OSSLibrariesLicenseListPageWear'
+});
+```
+
+:::
 
 **Verification:** the list page opens and shows the dependencies, one row per library. Tapping a row opens the detail page with the full license text.
 
