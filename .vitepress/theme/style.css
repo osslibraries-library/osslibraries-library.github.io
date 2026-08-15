@@ -44,27 +44,6 @@
   color: var(--vp-c-text-1);
 }
 
-/* Slightly wider measure for comfortable reading of guides. */
-.vp-doc {
-  max-width: 760px;
-}
-
-.vp-doc h1,
-.vp-doc h2,
-.vp-doc h3 {
-  letter-spacing: -0.01em;
-}
-
-.vp-doc p {
-  line-height: 1.85;
-}
-
-/* Make tables breathe a little. */
-.vp-doc table {
-  border-radius: 8px;
-  overflow: hidden;
-}
-
 /* Self-hosted Google Sans (latin + latin-ext; CJK falls back to system fonts). */
 @font-face {
   font-family: "Google Sans Flex";
