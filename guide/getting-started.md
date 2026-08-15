@@ -50,7 +50,7 @@ Per Huawei's documentation, Cangjie HarmonyOS apps cannot add ArkTS pages or cal
 
 One package renders the license list; the other scans dependencies at build time.
 
-Install the UI package from OHPM, matching your device type:
+Install the UI package from OHPM:
 
 ::: code-group
 
