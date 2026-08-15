@@ -1,4 +1,4 @@
-# Prebuilt UI (Wearable)
+# Prebuilt UI <Badge type="tip" text="Wearable" />
 
 The wearable prebuilt UI uses a separate module, `osslibraries_ui_wear`, with pages tuned for watch screens.
 

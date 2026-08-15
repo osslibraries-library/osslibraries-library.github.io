@@ -1,4 +1,4 @@
-# 预定义 UI（穿戴设备）
+# 预定义 UI <Badge type="tip" text="穿戴" />
 
 穿戴设备的预定义 UI 使用独立的模块 `osslibraries_ui_wear`，其页面针对手表屏幕做了适配。
 

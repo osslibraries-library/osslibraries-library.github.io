@@ -1,4 +1,4 @@
-# Prebuilt UI Pages
+# Prebuilt UI <Badge type="tip" text="Phone" /> <Badge type="tip" text="Tablet" /> <Badge type="tip" text="Foldable" />
 
 The `osslibraries_ui` package provides two embeddable ArkUI pages: a list of every dependency and a detail page for each one.
 

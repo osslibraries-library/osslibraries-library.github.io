@@ -128,7 +128,7 @@ export default defineConfig({
               text: "Library",
               items: [
                 { text: "预定义 UI", link: "/zh/guide/library/prebuilt-ui" },
-                { text: "预定义 UI（穿戴设备）", link: "/zh/guide/library/wearable" },
+                { text: "预定义 UI（穿戴）", link: "/zh/guide/library/wearable" },
                 { text: "自定义 UI", link: "/zh/guide/library/custom-ui" },
               ],
             },
