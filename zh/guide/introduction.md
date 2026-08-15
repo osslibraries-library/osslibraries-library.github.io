@@ -30,6 +30,12 @@ OSSLibraries 将维护工作交给构建过程：每次构建时插件检查真�
 - 正确处理 SPDX 表达式（`Apache-2.0 OR MIT`）、常见拼写错误、同一依赖多版本等情况。
 - 运行时的两种选择：使用预定义页面，或使用核心 API 自建 UI。
 
+::: info 什么是 SPDX？
+[SPDX](https://spdx.dev/learn/overview/)（Software Package Data Exchange，软件包数据交换标准）是一项用于交换软件物料清单信息的开放标准，涵盖来源、许可、安全及其他相关信息。SPDX 通过为组织和社区提供共享重要数据的通用格式，减少了重复工作，从而简化并提升了合规性、安全性和可靠性。SPDX 规范已被作为安全、许可合规性及其他软件供应链工件的国际开放标准（ISO/IEC 5962:2021）。
+
+OSSLibraries 使用 [SPDX License List](https://spdx.org/licenses/) 来识别并展示每个依赖的许可证。
+:::
+
 ## 环境要求
 
 - 一个基于 ArkTS 页面（ArkUI）构建的 HarmonyOS 应用。

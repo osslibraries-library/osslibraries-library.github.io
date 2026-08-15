@@ -28,6 +28,12 @@ OSSLibraries leaves the maintenance to the build: the plugin inspects the real d
 - Correct handling of SPDX expressions (`Apache-2.0 OR MIT`), misspellings, and multiple versions of the same dependency.
 - Two options at runtime: prebuilt UI pages, or the core data API with a custom UI.
 
+::: info What is SPDX?
+[SPDX](https://spdx.dev/learn/overview/) (Software Package Data Exchange) is an open standard for communicating software bill of material information, including provenance, license, security, and other related information. SPDX reduces redundant work by providing common formats for organizations and communities to share important data, thereby streamlining and improving compliance, security, and dependability. The SPDX specification is recognized as the international open standard for security, license compliance, and other software supply chain artifacts as ISO/IEC 5962:2021.
+
+OSSLibraries uses [SPDX License List](https://spdx.org/licenses/) to identify and display the license of every dependency.
+:::
+
 ## Requirements
 
 - A HarmonyOS app built with ArkTS pages (ArkUI).
