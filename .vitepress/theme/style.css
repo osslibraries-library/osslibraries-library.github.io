@@ -59,12 +59,6 @@
   line-height: 1.85;
 }
 
-/* Code blocks: subtle padding and rounded corners. */
-.vp-doc div[class*="language-"] {
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-}
-
 /* Make tables breathe a little. */
 .vp-doc table {
   border-radius: 8px;
