@@ -54,7 +54,7 @@
 
 ::: code-group
 
-```zsh [ohpm - 手机 / 平板 / 折叠屏]
+```zsh [ohpm - 手机 / 平板 / 折叠屏 / 智慧屏]
 ohpm install osslibraries_ui
 ```
 
@@ -128,7 +128,7 @@ UI 包提供了一个通过命名路由访问的页面。在 `entry` 模块的�
 
 ::: code-group
 
-```ets [ArkTS - 手机 / 平板 / 折叠屏]
+```ets [ArkTS - 手机 / 平板 / 折叠屏 / 智慧屏]
 import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicensePage';
 ```
 
@@ -158,7 +158,7 @@ import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseDetailPageWea
 
 ::: code-group
 
-```ets [ArkTS - 手机 / 平板 / 折叠屏]
+```ets [ArkTS - 手机 / 平板 / 折叠屏 / 智慧屏]
 this.getUIContext().getRouter().pushNamedRoute({
   name: 'OSSLibrariesLicensePage'
 });

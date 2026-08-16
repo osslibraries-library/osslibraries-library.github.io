@@ -1,4 +1,4 @@
-# Prebuilt UI <Badge type="tip" text="Phone" /> <Badge type="tip" text="Tablet" /> <Badge type="tip" text="Foldable" />
+# Prebuilt UI <Badge type="tip" text="Phone" /> <Badge type="tip" text="Tablet" /> <Badge type="tip" text="Foldable" /> <Badge type="tip" text="TV" />
 
 The `osslibraries_ui` package provides an embeddable adaptive ArkUI page that shows a list of every dependency and a detail view for each one.
 

@@ -54,7 +54,7 @@ Install the UI package from OHPM:
 
 ::: code-group
 
-```zsh [ohpm - Phone / Tablet / Foldable]
+```zsh [ohpm - Phone / Tablet / Foldable / TV]
 ohpm install osslibraries_ui
 ```
 
@@ -128,7 +128,7 @@ The UI package provides one page reachable by named route. Import it at the top 
 
 ::: code-group
 
-```ets [ArkTS - Phone / Tablet / Foldable]
+```ets [ArkTS - Phone / Tablet / Foldable / TV]
 import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicensePage';
 ```
 
@@ -158,7 +158,7 @@ From any page, use `pushNamedRoute` with the license page's route name:
 
 ::: code-group
 
-```ets [ArkTS - Phone / Tablet / Foldable]
+```ets [ArkTS - Phone / Tablet / Foldable / TV]
 this.getUIContext().getRouter().pushNamedRoute({
   name: 'OSSLibrariesLicensePage'
 });

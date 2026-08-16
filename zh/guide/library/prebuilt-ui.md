@@ -1,4 +1,4 @@
-# 预定义 UI <Badge type="tip" text="手机" /> <Badge type="tip" text="平板" /> <Badge type="tip" text="折叠屏" />
+# 预定义 UI <Badge type="tip" text="手机" /> <Badge type="tip" text="平板" /> <Badge type="tip" text="折叠屏" /> <Badge type="tip" text="智慧屏" />
 
 `osslibraries_ui` 包提供一个可嵌入应用的自适应 ArkUI 页面：依赖列表，以及每个依赖对应的详情视图。
 
