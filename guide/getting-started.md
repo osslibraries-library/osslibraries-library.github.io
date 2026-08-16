@@ -98,8 +98,6 @@ vlt install -D osslibraries-hvigor-plugin
 
 :::
 
-**Verification:** both packages appear in the project's lock files — `osslibraries_ui` or `osslibraries_ui_wear` under OHPM, `osslibraries-hvigor-plugin` under npm/pnpm.
-
 ## Step 2 — Register the plugin
 
 Open `entry/hvigorfile.ts` and add the plugin to the `plugins` array:
