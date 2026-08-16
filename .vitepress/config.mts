@@ -49,7 +49,7 @@ export default defineConfig({
             {
               text: "Library",
               items: [
-                { text: "Prebuilt UI Pages", link: "/guide/library/prebuilt-ui" },
+                { text: "Prebuilt UI", link: "/guide/library/prebuilt-ui" },
                 { text: "Prebuilt UI (Wearable)", link: "/guide/library/wearable" },
                 { text: "Custom UI", link: "/guide/library/custom-ui" },
               ],
