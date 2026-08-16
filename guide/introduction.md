@@ -1,6 +1,6 @@
 # Introduction
 
-OSSLibraries brings open-source license metadata to HarmonyOS apps. It scans OHPM dependencies at build time, writes the license information into the app's resource directory, and renders it as a list page and a detail page at run time.
+OSSLibraries brings open-source license metadata to HarmonyOS apps. It scans OHPM dependencies at build time, writes the license information into the app's resource directory, and renders it as an adaptive page with a list and a detail view at run time.
 
 The list needs no manual maintenance and never goes stale: it always matches the dependencies actually packaged into the HAP.
 

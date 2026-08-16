@@ -45,7 +45,7 @@ Build the UI as needed. The [Data Model](/reference/data-model) page lists every
 
 ## Share data across pages
 
-The default pages share one `Libs` instance between the list and the detail page. Do the same with `LibsHolder`:
+The default page shares one `Libs` instance between the list and the detail view. Do the same with `LibsHolder`:
 
 ```ets [ArkTS]
 LibsHolder.set(libs);

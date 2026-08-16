@@ -19,7 +19,7 @@ features:
   - title: Zero config
     details: Register the Hvigor plugin once. Every build regenerates the metadata from your current oh_modules.
   - title: Prebuilt UI
-    details: List and detail pages built on ArkUI and UI Design Kit. Import the pages and navigate by named route.
+    details: An adaptive page with a list and a detail view built on ArkUI and UI Design Kit. Import the page and navigate by named route.
   - title: Accurate licenses
     details: SPDX expressions like Apache-2.0 OR MIT are parsed fully, and common misspellings are corrected.
   - title: Full license text

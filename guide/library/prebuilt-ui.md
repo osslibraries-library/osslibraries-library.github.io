@@ -44,10 +44,10 @@ interface LicenseDetailParams {
 
 The detail view reads the parameters, looks the library up through `LibsHolder`, and shows its links and full license text. A row is not tappable when the library has neither licenses nor a website.
 
-## What the pages include
+## What the page includes
 
 - Loading, empty, and error states are built in.
-- The pages are built on ArkUI and UI Design Kit components.
+- The page is built on ArkUI and UI Design Kit components.
 - Link taps open the system browser through `startAbility`.
 
-See [Loading & Parsing](/reference/library/loading) for how the pages get their data, and [Custom UI](/guide/library/custom-ui) for replacing the pages with your own.
+See [Loading & Parsing](/reference/library/loading) for how the page gets its data, and [Custom UI](/guide/library/custom-ui) for replacing the page with your own.

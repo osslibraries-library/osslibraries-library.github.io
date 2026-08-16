@@ -1,6 +1,6 @@
 # Quick Start
 
-This tutorial wires OSSLibraries into a HarmonyOS app and shows a license list on screen. The list contains every OHPM dependency the app ships. Each entry opens a detail page with the full license text. The plugin regenerates the data on every build, so the list always matches the packaged dependencies.
+This tutorial wires OSSLibraries into a HarmonyOS app and shows a license list on screen. The list contains every OHPM dependency the app ships. Each entry opens a detail view with the full license text. The plugin regenerates the data on every build, so the list always matches the packaged dependencies.
 
 > [!TIP]
 > This library ships skills you can install so an AI agent can wire them into your project for you.

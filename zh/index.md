@@ -19,7 +19,7 @@ features:
   - title: 开箱即用
     details: 注册一次 Hvigor 插件，每次构建都会根据当前 oh_modules 重新生成元数据。
   - title: 预定义 UI
-    details: 基于 ArkUI 和 UI Design Kit 的列表页与详情页，导入页面即可通过命名路由访问。
+    details: 基于 ArkUI 和 UI Design Kit 的自适应页面（列表 + 详情视图），导入页面即可通过命名路由访问。
   - title: 精准识别
     details: 完整解析 Apache-2.0 OR MIT 等 SPDX 表达式，并自动纠正常见的拼写错误。
   - title: 完整许可证全文

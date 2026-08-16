@@ -55,7 +55,7 @@ static set(libs: Libs | undefined): void
 static get(): Libs | undefined
 ```
 
-内置页面使用它，这样详情页不需要重新加载文件。
+内置页面使用它，这样详情视图不需要重新加载文件。
 
 ```ets
 LibsHolder.set(libs);

@@ -55,7 +55,7 @@ static set(libs: Libs | undefined): void
 static get(): Libs | undefined
 ```
 
-The built-in pages use it so the detail page does not load the file again.
+The built-in page uses it so the detail view does not load the file again.
 
 ```ets
 LibsHolder.set(libs);

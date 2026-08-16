@@ -31,4 +31,4 @@ The plugin writes libraries in sorted order. The library sorts them again by nam
 
 ## Shared instance
 
-The list and detail pages show the same data. Loading and parsing the file once is enough. The pages use the static holder `LibsHolder` to pass the loaded `Libs` instance to the detail page, instead of reading the file on every navigation. Custom pages can use the same holder ([Custom UI](/guide/library/custom-ui)).
+The list and detail views show the same data. Loading and parsing the file once is enough. The page uses the static holder `LibsHolder` to pass the loaded `Libs` instance to the detail view, instead of reading the file on every navigation. Custom pages can use the same holder ([Custom UI](/guide/library/custom-ui)).

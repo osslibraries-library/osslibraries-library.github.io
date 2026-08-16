@@ -45,7 +45,7 @@ const license = libs.findLicense(hash);
 
 ## 跨页面共享数据
 
-预定义页面的列表页和详情页之间，共享着同一个 `Libs` 实例。用 `LibsHolder` 就能实现同样的效果：
+预定义页面的列表和详情视图之间，共享着同一个 `Libs` 实例。用 `LibsHolder` 就能实现同样的效果：
 
 ```ets [ArkTS]
 LibsHolder.set(libs);
