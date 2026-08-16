@@ -98,8 +98,6 @@ vlt install -D osslibraries-hvigor-plugin
 
 :::
 
-**验证：** 两个包都出现在项目的锁文件中——`osslibraries_ui` 或 `osslibraries_ui_wear` 在 OHPM 侧，`osslibraries-hvigor-plugin` 在 npm/pnpm 侧。
-
 ## 第 2 步 — 注册插件
 
 打开 `entry/hvigorfile.ts`，把插件加进 `plugins` 数组：
