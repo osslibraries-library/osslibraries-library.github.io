@@ -122,15 +122,14 @@ The module you register the plugin on is always excluded from the license list. 
 plugins: [ossScanPlugin({ selfModules: ["mylibrary", "3rdlibrary"] })];
 ```
 
-## Step 3 — Import the pages
+## Step 3 — Import the page
 
-The UI package provides two pages reachable by named route. Import them at the top of any page file in the `entry` module, for example `Index.ets`:
+The UI package provides one page reachable by named route. Import it at the top of any page file in the `entry` module, for example `Index.ets`:
 
 ::: code-group
 
 ```ets [ArkTS - Phone / Tablet / Foldable]
-import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseListPage';
-import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseDetailPage';
+import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicensePage';
 ```
 
 ```ets [ArkTS - Wearable]
@@ -155,13 +154,13 @@ Run a build in DevEco Studio. The plugin logs the scan result:
 
 ## Step 5 — Navigate to the license list
 
-From any page, use `pushNamedRoute` with the list page's route name:
+From any page, use `pushNamedRoute` with the license page's route name:
 
 ::: code-group
 
 ```ets [ArkTS - Phone / Tablet / Foldable]
 this.getUIContext().getRouter().pushNamedRoute({
-  name: 'OSSLibrariesLicenseListPage'
+  name: 'OSSLibrariesLicensePage'
 });
 ```
 
@@ -173,7 +172,7 @@ this.getUIContext().getRouter().pushNamedRoute({
 
 :::
 
-**Verification:** the list page opens and shows the dependencies, one row per library. Tapping a row opens the detail page with the full license text.
+**Verification:** the license page opens and shows the dependencies, one row per library. Tapping a row opens the detail view with the full license text.
 
 ## Next steps
 

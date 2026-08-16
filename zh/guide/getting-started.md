@@ -124,13 +124,12 @@ plugins: [ossScanPlugin({ selfModules: ["mylibrary", "3rdlibrary"] })];
 
 ## 第 3 步 — 导入页面
 
-UI 包提供了两个通过命名路由访问的页面。在 `entry` 模块的任意页面文件顶部（比如 `Index.ets`）导入它们：
+UI 包提供了一个通过命名路由访问的页面。在 `entry` 模块的任意页面文件顶部（比如 `Index.ets`）导入它：
 
 ::: code-group
 
 ```ets [ArkTS - 手机 / 平板 / 折叠屏]
-import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseListPage';
-import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicenseDetailPage';
+import 'osslibraries_ui/src/main/ets/pages/OSSLibrariesLicensePage';
 ```
 
 ```ets [ArkTS - 穿戴]
@@ -153,7 +152,7 @@ import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseDetailPageWea
 
 **验证：** `entry/src/main/resources/rawfile/osslibraries.json` 文件现在存在，并包含一个 `libraries` 数组。它的结构见[数据模型](/zh/reference/data-model)。
 
-## 第 5 步 — 跳转到许可证列表页
+## 第 5 步 — 跳转到许可证页
 
 在任意页面通过 `pushNamedRoute` 跳转：
 
@@ -161,7 +160,7 @@ import 'osslibraries_ui_wear/src/main/ets/pages/OSSLibrariesLicenseDetailPageWea
 
 ```ets [ArkTS - 手机 / 平板 / 折叠屏]
 this.getUIContext().getRouter().pushNamedRoute({
-  name: 'OSSLibrariesLicenseListPage'
+  name: 'OSSLibrariesLicensePage'
 });
 ```
 
@@ -173,7 +172,7 @@ this.getUIContext().getRouter().pushNamedRoute({
 
 :::
 
-**验证：** 列表页打开并展示依赖列表，每个库一行。点击任意一行进入包含完整许可证全文的详情页。
+**验证：** 许可证页打开并展示依赖列表，每个库一行。点击任意一行进入包含完整许可证全文的详情视图。
 
 ## 接下来
 
